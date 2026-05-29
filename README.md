@@ -18,3 +18,4 @@
 
 ## Descarga la imagen Linux de CachyOS.
 > Para descargar CachyOS puedes hacerlo desde:
+https://cachyos.org/
