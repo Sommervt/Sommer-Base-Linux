@@ -23,5 +23,7 @@ https://cachyos.org/
 
 ## Descarga Rufus o Ventoy.
 > Yo personalmente utilizo Rufus para flashear USB, pero si te gusta ventoy por su capacidad de almacenar varias .ISO no hay ningún problema.
-> Puedes descargar Rufus desde:https://rufus.ie/es/
-> Puedes descargar Ventoy desde:https://www.ventoy.net/en/index.html
+> Puedes descargar Rufus desde:
+> https://rufus.ie/es/
+> Puedes descargar Ventoy desde:
+> https://www.ventoy.net/en/index.html
