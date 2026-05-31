@@ -19,11 +19,15 @@
 ## Descarga la imagen Linux de CachyOS.
 > Para descargar CachyOS puedes hacerlo desde:
 https://cachyos.org/
+
 > Puedes utilizar cualquier distribución con soporte de Hyprland, pero yo personalmente uso CachyOS por su optimizacion.
 
 ## Descarga Rufus o Ventoy.
 > Yo personalmente utilizo Rufus para flashear USB, pero si te gusta ventoy por su capacidad de almacenar varias .ISO no hay ningún problema.
 > Puedes descargar Rufus desde:
+
 > https://rufus.ie/es/
+
 > Puedes descargar Ventoy desde:
+
 > https://www.ventoy.net/en/index.html
