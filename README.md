@@ -32,3 +32,17 @@ https://cachyos.org/
 > Puedes descargar Ventoy desde:
 
 > https://www.ventoy.net/en/index.html
+
+## Flashear la USB (Rufus)
+> Antes debes verificar si tu disco usa GPT o MBR, normalmente, los sistemas UEFI usan GPT.
+
+- Abre Rufus y conecta la USB, Rufus lo detecta automáticamente.
+- Selecciona la imagen .ISO o el archivo .rar de CachyOS en Boot Selection.
+- Persistent Partition puedes dejarlo en 0GB si quieres.
+- asegúrate que Partition Scheme y Target System Sea GPT.
+- Aquí puedes presionar Start y dejar lo demás en Default.
+
+> Imagen de Ejemplo:
+
+
+https://rufus.ie/pics/screenshot1_es.png
