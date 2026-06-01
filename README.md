@@ -45,4 +45,4 @@ https://cachyos.org/
 > Imagen de Ejemplo:
 
 
-! (https://rufus.ie/pics/screenshot1_es.png)
+![ejemplo](https://rufus.ie/pics/screenshot1_es.png)
