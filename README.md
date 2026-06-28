@@ -14,7 +14,7 @@
 - CPU AMD o INTEL preferiblemente versiones recientes.
 - 8GB DE RAM (MÍNIMO 4GB)
 - SSD SATA/NVMe de mínimo 100GB (500GB recomendado).
-- USB flasheable de 8GB de espacio mínimo.
+- USB flasheable de 8GB de espacio mínimo, es recomendable tener puertos y una USB moderadamente rápida, ya que este proceso dependerá mucho de la velocidad de estos.
 
 ## Descarga la imagen Linux de CachyOS.
 > Para descargar CachyOS puedes hacerlo desde:
@@ -46,3 +46,8 @@ https://cachyos.org/
 
 
 ![ejemplo](https://rufus.ie/pics/screenshot1_es.png)
+
+## Bootear la USB
+
+- Aqui necesitaras ir a la BIOS y desactivar cosas como Mode Secure, o incluso ordenar el orden de booteo desde ahi,pero la mayoría de pc's modernas tienen el apartado del boot menu por lo que quizás no lo necesites.
+
