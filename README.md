@@ -51,3 +51,6 @@ https://cachyos.org/
 
 - Aqui necesitaras ir a la BIOS y desactivar cosas como Mode Secure, o incluso ordenar el orden de booteo desde ahi,pero la mayoría de pc's modernas tienen el apartado del boot menu por lo que quizás no lo necesites.
 
+> Ejemplo de Boot menu/manager en PC DELL.
+
+![ejemplo](https://prod-care-community-cdn.sprinklr.com/community/687062f5-603c-4f5f-ab9d-31aa7cacb376/ReFullF2andF12settingstoenable-ba6f9e82-bee8-4581-8f2a-e97abfc8958c-1907850836)
