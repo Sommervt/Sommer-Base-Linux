@@ -59,5 +59,7 @@ https://cachyos.org/
 - Una vez la ejecutes entraras normalmente a un modo de carga del sistema operativo hacia la RAM, suele tardarse un poco.
 - Es posible que te aparezca un menu GRUB pero no hay que tenerle miedo, hay varias opciones como entrar al sistema como normalmente seria y entrar mediante una consola.
 
-  >GRUB de Ejemplo:
+  > GRUB de Ejemplo:
+  
+
   ![ejemplo](https://www.phoronix.net/image.php?id=epyc-cachyos-server-preview&image=cachyos_epyc_4_med)
