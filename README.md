@@ -54,3 +54,10 @@ https://cachyos.org/
 > Ejemplo de Boot menu/manager en PC DELL.
 
 ![ejemplo](https://prod-care-community-cdn.sprinklr.com/community/687062f5-603c-4f5f-ab9d-31aa7cacb376/ReFullF2andF12settingstoenable-ba6f9e82-bee8-4581-8f2a-e97abfc8958c-1907850836)
+
+- Y bueno, ahora debe elegir la USB que acaba de bootear, normalmente se llamara dependiendo de que marca sea se llamara igual.
+- Una vez la ejecutes entraras normalmente a un modo de carga del sistema operativo hacia la RAM, suele tardarse un poco.
+- Es posible que te aparezca un menu GRUB pero no hay que tenerle miedo, hay varias opciones como entrar al sistema como normalmente seria y entrar mediante una consola.
+
+  >GRUB de Ejemplo:
+  ![ejemplo](https://www.phoronix.net/image.php?id=epyc-cachyos-server-preview&image=cachyos_epyc_4_med)
