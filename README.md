@@ -63,3 +63,6 @@ https://cachyos.org/
   
 
   ![ejemplo](https://www.phoronix.net/image.php?id=epyc-cachyos-server-preview&image=cachyos_epyc_4_med)
+
+  ## Welcome to CachyOS
+  ![ejemplo](https://www.linuxcompatible.org/data/publish/230/e22854b83c3198154b457dcd0c618af27c3a1f/screenshot_from_2025_03_30_18_03_36.jpg)
