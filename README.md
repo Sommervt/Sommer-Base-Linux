@@ -1,68 +1,33 @@
-# Configuración Base del Linux de Sommerfeld (🇪🇸).
-> Esta es una Guia enfocada sobretodo en la instalación de la configuración de Linux por parte de Sommerfeld en laptops con sistema moderno UEFI, SSD NVMe y Windows 11.
+# Sommer · Guía de instalación Linux
 
-> Esta guía explica como instalar un dualboot con:
-- CachyOS (Personalizado)
-- Windows 11 (Base)
+Guía web interactiva en español para instalar CachyOS con Hyprland y el shell
+II-P3DROVFX, basado en los dotfiles de end4 / illogical-impulse.
 
-# ¿Por qué esta configuración de Cachy y Windows?
-> Windows es un sistema con muchas herramientas de creación como Adobe, juegos modernos, servicios de Ofimática bastante completos, y es un sistema "fácil" de utilizar.
+## Ver la guía
 
-> Linux en cambio, es muy personalizable, sacrificando compatibilidad con aplicaciones y amabilidad con el usuario, es un sistema más robusto y complejo, pero mucho más versátil y flexible.
+Abre [`index.html`](./index.html) en un navegador. No necesita dependencias ni un
+servidor de aplicación.
 
-## Requisitos (hardware).
-- CPU AMD o INTEL preferiblemente versiones recientes.
-- 8GB DE RAM (MÍNIMO 4GB)
-- SSD SATA/NVMe de mínimo 100GB (500GB recomendado).
-- USB flasheable de 8GB de espacio mínimo, es recomendable tener puertos y una USB moderadamente rápida, ya que este proceso dependerá mucho de la velocidad de estos.
+## Publicar en GitHub Pages
 
-## Descarga la imagen Linux de CachyOS.
-> Para descargar CachyOS puedes hacerlo desde:
-https://cachyos.org/
+El repositorio incluye un flujo de GitHub Actions que publica automáticamente
+los archivos en GitHub Pages al hacer `push` a la rama `main`.
 
-> Puedes utilizar cualquier distribución con soporte de Hyprland, pero yo personalmente uso CachyOS por su optimizacion.
+1. En GitHub abre **Settings > Pages**.
+2. En **Build and deployment > Source**, selecciona **GitHub Actions**.
+3. Envía los cambios a la rama `main`.
+4. Espera a que termine el workflow **Deploy GitHub Pages**.
 
-## Descarga Rufus o Ventoy.
-> Yo personalmente utilizo Rufus para flashear USB, pero si te gusta ventoy por su capacidad de almacenar varias .ISO no hay ningún problema.
+La URL pública aparecerá en **Settings > Pages** y también en el entorno
+`github-pages` de la acción. El sitio puede ser abierto simultáneamente por
+muchos usuarios sin autenticación ni servidor adicional.
 
-> Puedes descargar Rufus desde:
+## Progreso de los visitantes
 
-> https://rufus.ie/es/
+Cada navegador guarda su propio progreso mediante `localStorage`. El avance no
+se comparte entre usuarios ni entre navegadores; no se envían datos personales
+al repositorio ni a GitHub.
 
-> Puedes descargar Ventoy desde:
-
-> https://www.ventoy.net/en/index.html
-
-## Flashear la USB (Rufus)
-> Antes debes verificar si tu disco usa GPT o MBR, normalmente, los sistemas UEFI usan GPT.
-
-- Abre Rufus y conecta la USB, Rufus lo detecta automáticamente.
-- Selecciona la imagen .ISO o el archivo .rar de CachyOS en Boot Selection.
-- Persistent Partition puedes dejarlo en 0GB si quieres.
-- asegúrate que Partition Scheme y Target System Sea GPT.
-- Aquí puedes presionar Start y dejar lo demás en Default.
-
-> Imagen de Ejemplo:
-
-
-![ejemplo](https://rufus.ie/pics/screenshot1_es.png)
-
-## Bootear la USB
-
-- Aqui necesitaras ir a la BIOS y desactivar cosas como Mode Secure, o incluso ordenar el orden de booteo desde ahi,pero la mayoría de pc's modernas tienen el apartado del boot menu por lo que quizás no lo necesites.
-
-> Ejemplo de Boot menu/manager en PC DELL.
-
-![ejemplo](https://prod-care-community-cdn.sprinklr.com/community/687062f5-603c-4f5f-ab9d-31aa7cacb376/ReFullF2andF12settingstoenable-ba6f9e82-bee8-4581-8f2a-e97abfc8958c-1907850836)
-
-- Y bueno, ahora debe elegir la USB que acaba de bootear, normalmente se llamara dependiendo de que marca sea se llamara igual.
-- Una vez la ejecutes entraras normalmente a un modo de carga del sistema operativo hacia la RAM, suele tardarse un poco.
-- Es posible que te aparezca un menu GRUB pero no hay que tenerle miedo, hay varias opciones como entrar al sistema como normalmente seria y entrar mediante una consola.
-
-  > GRUB de Ejemplo:
-  
-
-  ![ejemplo](https://www.phoronix.net/image.php?id=epyc-cachyos-server-preview&image=cachyos_epyc_4_med)
-
-  ## Welcome to CachyOS
-  ![ejemplo](https://www.linuxcompatible.org/data/publish/230/e22854b83c3198154b457dcd0c618af27c3a1f/screenshot_from_2025_03_30_18_03_36.jpg)
+El progreso se guarda localmente en el navegador. Los instaladores, requisitos y
+enlaces de proyectos externos se documentan en la propia guía y pueden cambiar
+con el tiempo; consulta siempre sus fuentes oficiales antes de instalar.

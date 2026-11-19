@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta
+      name="description"
+      content="Guía interactiva para instalar CachyOS con Hyprland, end4 e II-P3DROVFX."
+    >
+    <meta name="theme-color" content="#111313">
+    <title>Sommer · Guía de instalación CachyOS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    >
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <header class="topbar">
+      <a class="brand" href="#" aria-label="Sommer, inicio">
+        <span class="brand-mark" aria-hidden="true">S<span>.</span></span>
+        <span class="brand-name">SOMMER<span>/LINUX</span></span>
+      </a>
+      <nav class="top-links" aria-label="Enlaces externos">
+        <a href="https://cachyos.org/" target="_blank" rel="noreferrer">CachyOS <span aria-hidden="true">↗</span></a>
+        <a href="https://github.com/P3DROVFX/ii-p3drovfx" target="_blank" rel="noreferrer">II-P3DROVFX <span aria-hidden="true">↗</span></a>
+        <a class="github-link" href="https://github.com/Sommervt/Sommer-Base-Linux" target="_blank" rel="noreferrer">
+          <span class="github-dot" aria-hidden="true"></span> Ver repositorio
+        </a>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-copy">
+          <p class="eyebrow"><span class="eyebrow-line"></span> GUÍA DE INSTALACIÓN <span class="eyebrow-version">2026 / ES</span></p>
+          <h1 id="hero-title">Tu próximo escritorio empieza <span>por aquí.</span></h1>
+          <p class="hero-description">
+            Una guía práctica para instalar CachyOS y poner en marcha un escritorio Hyprland
+            con la experiencia visual de II-P3DROVFX, basada en el trabajo de end4.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#preparar">Empezar la guía <span aria-hidden="true">↓</span></a>
+            <a class="text-link" href="https://github.com/end-4/dots-hyprland" target="_blank" rel="noreferrer">
+              Conocer end4 <span aria-hidden="true">↗</span>
+            </a>
+          </div>
+          <div class="hero-meta">
+            <span><span class="status-dot"></span> CachyOS + Hyprland</span>
+            <span class="meta-divider" aria-hidden="true"></span>
+            <span>4 pasos · progreso guardado en este dispositivo</span>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="Vista decorativa de una terminal de CachyOS">
+          <div class="art-grid" aria-hidden="true"></div>
+          <div class="terminal-window">
+            <div class="terminal-bar">
+              <span class="terminal-lights" aria-hidden="true"><i></i><i></i><i></i></span>
+              <span>sommer@cachyos <span class="terminal-path">~</span></span>
+              <span class="terminal-menu" aria-hidden="true">···</span>
+            </div>
+            <div class="terminal-content" aria-hidden="true">
+              <p><span class="terminal-prompt">❯</span> fastfetch</p>
+              <div class="fastfetch">
+                <pre class="fastfetch-mark">   /\_/\
+  ( o.o )   <span>sommer@cachyos</span>
+   > ^ &lt;    ──────────────
+            <b>OS</b>     CachyOS Linux
+            <b>WM</b>     Hyprland
+            <b>Shell</b>  II-P3DROVFX
+            <b>Base</b>   end4 · illogical-impulse</pre>
+              </div>
+              <p class="terminal-ready"><span>✓</span> listo para empezar<span class="cursor">_</span></p>
+            </div>
+          </div>
+          <div class="art-chip"><span aria-hidden="true">✳</span> TU SETUP, PASO A PASO</div>
+          <span class="art-index" aria-hidden="true">01 — 04</span>
+        </div>
+      </section>
+
+      <div class="guide-layout">
+        <aside class="guide-nav" aria-label="Navegación de la guía">
+          <div class="progress-card">
+            <div class="progress-heading">
+              <span>Tu progreso</span>
+              <span class="progress-count" id="progress-count">0/4</span>
+            </div>
+            <div
+              class="progress-track"
+              id="progress-track"
+              role="progressbar"
+              aria-label="Progreso de instalación"
+              aria-valuemin="0"
+              aria-valuemax="4"
+              aria-valuenow="0"
+            >
+              <span id="progress-fill"></span>
+            </div>
+            <p id="progress-message">Un paso a la vez. Puedes volver cuando quieras.</p>
+          </div>
+
+          <p class="nav-label">CONTENIDO</p>
+          <nav class="step-nav">
+            <a class="step-link is-active" href="#preparar" data-step-link="preparar">
+              <span class="step-number">01</span><span>Preparar el equipo</span><span class="step-check" aria-hidden="true">✓</span>
+            </a>
+            <a class="step-link" href="#cachyos" data-step-link="cachyos">
+              <span class="step-number">02</span><span>Instalar CachyOS</span><span class="step-check" aria-hidden="true">✓</span>
+            </a>
+            <a class="step-link" href="#escritorio" data-step-link="escritorio">
+              <span class="step-number">03</span><span>Instalar el escritorio</span><span class="step-check" aria-hidden="true">✓</span>
+            </a>
+            <a class="step-link" href="#verificar" data-step-link="verificar">
+              <span class="step-number">04</span><span>Primer inicio</span><span class="step-check" aria-hidden="true">✓</span>
+            </a>
+          </nav>
+          <button class="reset-button" id="reset-progress" type="button">Reiniciar progreso</button>
+
+          <div class="nav-note">
+            <span class="note-icon" aria-hidden="true">i</span>
+            <p>¿Primera vez instalando Linux? Lee todos los pasos antes de cambiar particiones.</p>
+          </div>
+        </aside>
+
+        <div class="guide-content">
+          <section class="guide-section" id="preparar" data-step="preparar">
+            <div class="section-heading">
+              <div class="section-number">01</div>
+              <div>
+                <p class="section-kicker">ANTES DE EMPEZAR</p>
+                <h2>Prepara tu equipo</h2>
+                <p class="section-intro">Unos minutos de preparación pueden ahorrarte horas de problemas.</p>
+              </div>
+            </div>
+
+            <div class="notice notice-warning">
+              <span class="notice-icon" aria-hidden="true">!</span>
+              <div>
+                <strong>Haz una copia de seguridad primero</strong>
+                <p>Instalar un sistema operativo puede borrar datos. Guarda tus archivos importantes y confirma qué disco y particiones vas a utilizar antes de continuar.</p>
+              </div>
+            </div>
+
+            <div class="spec-grid">
+              <article class="spec-card">
+                <span class="spec-icon" aria-hidden="true">⌁</span>
+                <span class="spec-label">MEMORIA</span>
+                <strong>8 GB <span>recomendados</span></strong>
+                <p>4 GB mínimo; más memoria mejora Quickshell y la multitarea.</p>
+              </article>
+              <article class="spec-card">
+                <span class="spec-icon" aria-hidden="true">▤</span>
+                <span class="spec-label">ALMACENAMIENTO</span>
+                <strong>100 GB <span>disponibles</span></strong>
+                <p>SSD recomendado. Reserva espacio adicional para tus aplicaciones y archivos.</p>
+              </article>
+              <article class="spec-card">
+                <span class="spec-icon" aria-hidden="true">⌘</span>
+                <span class="spec-label">MEDIO DE INSTALACIÓN</span>
+                <strong>USB <span>de 8 GB o más</span></strong>
+                <p>Necesitarás otra computadora para preparar la memoria USB.</p>
+              </article>
+            </div>
+
+            <div class="checklist" aria-label="Lista de preparación">
+              <label class="check-row">
+                <input type="checkbox" data-check="backup">
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="check-copy"><strong>Ya respaldé mis archivos importantes</strong><small>Especialmente si voy a instalar junto a Windows.</small></span>
+                <span class="check-tag">REQUERIDO</span>
+              </label>
+              <label class="check-row">
+                <input type="checkbox" data-check="hardware">
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="check-copy"><strong>Revisé que mi equipo cumpla los requisitos</strong><small>UEFI y un SSD con espacio libre son recomendables.</small></span>
+                <span class="check-tag">REQUERIDO</span>
+              </label>
+            </div>
+            <button class="complete-button" type="button" data-complete="preparar">
+              <span class="complete-indicator" aria-hidden="true"></span><span>Marcar preparación como lista</span><span class="complete-arrow" aria-hidden="true">→</span>
+            </button>
+          </section>
+
+          <section class="guide-section" id="cachyos" data-step="cachyos">
+            <div class="section-heading">
+              <div class="section-number">02</div>
+              <div>
+                <p class="section-kicker">EL SISTEMA BASE</p>
+                <h2>Instala CachyOS</h2>
+                <p class="section-intro">Primero instala el sistema operativo. El escritorio personalizado viene después.</p>
+              </div>
+            </div>
+
+            <div class="install-list">
+              <article class="install-item">
+                <span class="install-index">A</span>
+                <div class="install-copy">
+                  <h3>Descarga la imagen oficial</h3>
+                  <p>Obtén la ISO directamente desde CachyOS y revisa sus instrucciones actuales de instalación.</p>
+                  <a class="inline-link" href="https://cachyos.org/download/" target="_blank" rel="noreferrer">Descargar CachyOS <span aria-hidden="true">↗</span></a>
+                </div>
+                <span class="external-mark" aria-hidden="true">↗</span>
+              </article>
+              <article class="install-item">
+                <span class="install-index">B</span>
+                <div class="install-copy">
+                  <h3>Crea una USB booteable</h3>
+                  <p>En Windows puedes usar Rufus o Ventoy. Para un equipo UEFI moderno, el esquema de partición suele ser GPT. La USB se borrará al prepararla.</p>
+                  <div class="resource-links">
+                    <a href="https://rufus.ie/es/" target="_blank" rel="noreferrer">Rufus <span aria-hidden="true">↗</span></a>
+                    <a href="https://www.ventoy.net/" target="_blank" rel="noreferrer">Ventoy <span aria-hidden="true">↗</span></a>
+                  </div>
+                </div>
+                <span class="external-mark" aria-hidden="true">↗</span>
+              </article>
+              <article class="install-item">
+                <span class="install-index">C</span>
+                <div class="install-copy">
+                  <h3>Arranca desde la USB e instala</h3>
+                  <p>Abre el menú de arranque del equipo, inicia la memoria y sigue el instalador de CachyOS. Si vas a conservar Windows, identifica cuidadosamente cada partición: no elijas borrar todo el disco.</p>
+                  <span class="install-tip"><span aria-hidden="true">↳</span> El menú de arranque suele abrirse con F12, F11, Esc o una tecla indicada por el fabricante.</span>
+                </div>
+                <span class="external-mark" aria-hidden="true">03</span>
+              </article>
+            </div>
+            <div class="notice notice-info">
+              <span class="notice-icon" aria-hidden="true">i</span>
+              <div>
+                <strong>¿Vas a usar dual boot con Windows?</strong>
+                <p>Este sitio no puede determinar la distribución segura de particiones para cada equipo. Sigue la guía oficial de CachyOS y no cambies particiones si no reconoces su contenido.</p>
+                <a class="inline-link" href="https://wiki.cachyos.org/" target="_blank" rel="noreferrer">Consultar la wiki de CachyOS <span aria-hidden="true">↗</span></a>
+              </div>
+            </div>
+            <div class="checklist">
+              <label class="check-row">
+                <input type="checkbox" data-check="os">
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="check-copy"><strong>CachyOS ya está instalado y puedo iniciar sesión</strong><small>Conéctate a internet antes de instalar el escritorio.</small></span>
+                <span class="check-tag">REQUERIDO</span>
+              </label>
+            </div>
+            <button class="complete-button" type="button" data-complete="cachyos">
+              <span class="complete-indicator" aria-hidden="true"></span><span>Marcar CachyOS como instalado</span><span class="complete-arrow" aria-hidden="true">→</span>
+            </button>
+          </section>
+
+          <section class="guide-section" id="escritorio" data-step="escritorio">
+            <div class="section-heading">
+              <div class="section-number">03</div>
+              <div>
+                <p class="section-kicker">HYPRLAND + QUICKSHELL</p>
+                <h2>Instala el escritorio</h2>
+                <p class="section-intro">II-P3DROVFX está construido sobre illogical-impulse, los dotfiles de Hyprland de end4.</p>
+              </div>
+            </div>
+
+            <div class="lineage-card">
+              <span class="lineage-node">CachyOS</span><span class="lineage-connector" aria-hidden="true">→</span>
+              <span class="lineage-node">Hyprland</span><span class="lineage-connector" aria-hidden="true">→</span>
+              <span class="lineage-node">end4 / illogical-impulse</span><span class="lineage-connector" aria-hidden="true">→</span>
+              <span class="lineage-node lineage-final">II-P3DROVFX</span>
+            </div>
+
+            <div class="notice notice-warning compact-notice">
+              <span class="notice-icon" aria-hidden="true">!</span>
+              <div>
+                <strong>No instales las dos configuraciones una encima de la otra</strong>
+                <p>Para un sistema limpio, el instalador predeterminado de II-P3DROVFX prepara la base y aplica su configuración. No hace falta ejecutar por separado el instalador de end4.</p>
+              </div>
+            </div>
+
+            <div class="requirements">
+              <div class="requirements-heading">
+                <span class="requirements-icon" aria-hidden="true">◈</span>
+                <div><strong>Requisitos de II-P3DROVFX</strong><small>Confirma compatibilidad en el repositorio antes de instalar.</small></div>
+              </div>
+              <div class="requirement-pills">
+                <span>Hyprland <b>0.56.1+</b></span>
+                <span>Matugen <b>4.1.0+</b></span>
+                <span>Quickshell <b>0.3.0+</b></span>
+              </div>
+            </div>
+
+            <div class="mode-heading">
+              <h3>Elige tu tipo de instalación</h3>
+              <span>SOLO UNA OPCIÓN</span>
+            </div>
+            <div class="mode-grid">
+              <article class="mode-card recommended">
+                <div class="mode-label"><span class="mode-dot"></span> RECOMENDADA · SISTEMA LIMPIO</div>
+                <h3>Instalación completa</h3>
+                <p>Prepara la base de illogical-impulse y después instala II-P3DROVFX. Úsala si acabas de instalar CachyOS.</p>
+                <div class="code-block">
+                  <div class="code-head"><span>TERMINAL</span><button class="copy-button" type="button" data-copy="full-install">Copiar <span aria-hidden="true">⧉</span></button></div>
+                  <pre><code id="full-install">git clone --recurse-submodules https://github.com/P3DROVFX/ii-p3drovfx.git
+cd ii-p3drovfx
+./setup-ii-p3drovfx.sh install</code></pre>
+                </div>
+                <a class="mode-link" href="https://github.com/P3DROVFX/ii-p3drovfx#installation" target="_blank" rel="noreferrer">Guía oficial de instalación <span aria-hidden="true">↗</span></a>
+              </article>
+
+              <article class="mode-card">
+                <div class="mode-label mode-label-muted"><span class="mode-dot"></span> BASE end4 YA FUNCIONANDO</div>
+                <h3>Solo configuración</h3>
+                <p>Usa este modo si illogical-impulse ya funciona en tu sesión. Instala la configuración de Quickshell de II-P3DROVFX.</p>
+                <div class="code-block">
+                  <div class="code-head"><span>TERMINAL</span><button class="copy-button" type="button" data-copy="minimal-install">Copiar <span aria-hidden="true">⧉</span></button></div>
+                  <pre><code id="minimal-install">git clone --recurse-submodules https://github.com/P3DROVFX/ii-p3drovfx.git
+cd ii-p3drovfx
+./setup-ii-p3drovfx.sh</code></pre>
+                </div>
+                <a class="mode-link" href="https://github.com/end-4/dots-hyprland" target="_blank" rel="noreferrer">Ver los dotfiles de end4 <span aria-hidden="true">↗</span></a>
+              </article>
+            </div>
+            <p class="source-note">Estos comandos corresponden a los modos publicados por II-P3DROVFX. El instalador muestra las acciones antes de ejecutarlas; revisa cada cambio y consulta su wiki si necesitas detalles.</p>
+            <div class="checklist">
+              <label class="check-row">
+                <input type="checkbox" data-check="desktop">
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="check-copy"><strong>Instalé una sola opción y revisé los mensajes del instalador</strong><small>No cierres la terminal mientras el proceso siga trabajando.</small></span>
+                <span class="check-tag">REQUERIDO</span>
+              </label>
+            </div>
+            <button class="complete-button" type="button" data-complete="escritorio">
+              <span class="complete-indicator" aria-hidden="true"></span><span>Marcar escritorio como instalado</span><span class="complete-arrow" aria-hidden="true">→</span>
+            </button>
+          </section>
+
+          <section class="guide-section" id="verificar" data-step="verificar">
+            <div class="section-heading">
+              <div class="section-number">04</div>
+              <div>
+                <p class="section-kicker">TODO EN SU SITIO</p>
+                <h2>Tu primer inicio</h2>
+                <p class="section-intro">Reinicia, entra en Hyprland y comprueba que los componentes principales respondan.</p>
+              </div>
+            </div>
+            <div class="first-boot-card">
+              <div class="boot-window">
+                <span></span><span></span><span></span>
+              </div>
+              <div class="boot-content">
+                <span class="boot-check" aria-hidden="true">✓</span>
+                <div><strong>¡Bienvenido a tu escritorio!</strong><p>El papel tapiz puede generar la paleta de colores del shell. La primera carga puede tardar un poco mientras se inicializan los componentes.</p></div>
+              </div>
+            </div>
+            <div class="verify-grid">
+              <article class="verify-card">
+                <span class="verify-number">01</span>
+                <h3>Abre la ayuda de atajos</h3>
+                <p>Prueba <kbd>Super</kbd> + <kbd>/</kbd> para consultar los atajos configurados.</p>
+              </article>
+              <article class="verify-card">
+                <span class="verify-number">02</span>
+                <h3>Comprueba las versiones</h3>
+                <p>En una terminal, revisa que Hyprland, Quickshell y Matugen se hayan instalado correctamente.</p>
+              </article>
+              <article class="verify-card">
+                <span class="verify-number">03</span>
+                <h3>Si algo no carga</h3>
+                <p>Consulta la wiki y los problemas conocidos de II-P3DROVFX antes de repetir el instalador.</p>
+              </article>
+            </div>
+            <div class="checklist">
+              <label class="check-row">
+                <input type="checkbox" data-check="first-boot">
+                <span class="custom-check" aria-hidden="true"></span>
+                <span class="check-copy"><strong>Reinicié e inicié sesión en mi escritorio nuevo</strong><small>Ya estás listo para personalizar tu setup.</small></span>
+                <span class="check-tag">FINAL</span>
+              </label>
+            </div>
+            <button class="complete-button" type="button" data-complete="verificar">
+              <span class="complete-indicator" aria-hidden="true"></span><span>Completar la guía</span><span class="complete-arrow" aria-hidden="true">→</span>
+            </button>
+            <div class="finish-card" id="finish-card" hidden>
+              <span class="finish-spark" aria-hidden="true">✳</span>
+              <div><strong>¡Guía completada!</strong><p>Disfruta tu nuevo escritorio. Guarda los enlaces oficiales para futuras actualizaciones.</p></div>
+              <a href="https://github.com/P3DROVFX/ii-p3drovfx/wiki" target="_blank" rel="noreferrer">Abrir la wiki <span aria-hidden="true">↗</span></a>
+            </div>
+          </section>
+
+          <footer class="page-footer">
+            <span>HECHO CON <span class="footer-heart" aria-label="cariño">♥</span> POR SOMMER</span>
+            <span>Los proyectos enlazados mantienen sus propios instaladores y documentación.</span>
+          </footer>
+        </div>
+      </div>
+    </main>
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>
